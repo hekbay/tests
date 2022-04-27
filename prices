@@ -1,0 +1,32 @@
+public class JavaApplication1 {
+    
+    public static void main(String[] args){
+        
+        double x = Input.readDouble("Informe o valor do produto em doletas: ");
+        bruto(x);
+    }
+    
+    static void bruto(double x){
+        double a;
+        double e = 0;
+        if(x <= 500){
+            a = x+80;
+        } else{
+            a = x+160;
+        }
+        
+        double b = Input.readDouble("Valor do dólar atual: ");
+        double c = (a*b);
+        double d = Input.readDouble("Valor do produto no Brasil: ");
+        
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        System.out.println("Valor do produto no Brasil: "+d);
+        System.out.println("Valor bruto do produto em dol: "+a);
+        System.out.println("Valor bruto do produto em R$: "+c);
+        
+        if(d > 2000 && d > c){
+            e++;
+        
+        }
+    }
+}
