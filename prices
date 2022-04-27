@@ -23,6 +23,7 @@ public class JavaApplication1 {
         System.out.println("Valor do produto no Brasil: "+d);
         System.out.println("Valor bruto do produto em dol: "+a);
         System.out.println("Valor bruto do produto em R$: "+c);
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         
         if(d > 2000 && d > c){
             e++;
