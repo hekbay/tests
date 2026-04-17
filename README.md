@@ -59,3 +59,18 @@ celery -A creative_pipeline.pipeline worker --loglevel=info
 - Adicionar feedback loop (bom/ruim) para otimizar prompts.
 - Gerar 3-5 variações por brief automaticamente.
 - A/B testing por canal/campanha.
+
+
+## Setup rápido com NPM
+
+Se você preferir rodar os comandos via `npm`, use este fluxo:
+
+```bash
+npm run setup
+npm run check
+npm run api
+# em outro terminal
+npm run worker
+```
+
+> Observação: o projeto continua sendo Python; o `package.json` aqui funciona como *task runner*.

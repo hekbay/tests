@@ -1,0 +1,15 @@
+{
+  "name": "creative-generation-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NPM task runner para setup e execução do pipeline Python (FastAPI + Celery)",
+  "scripts": {
+    "setup": "python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt",
+    "api": ". .venv/bin/activate && uvicorn creative_pipeline.api:app --reload",
+    "worker": ". .venv/bin/activate && celery -A creative_pipeline.pipeline worker --loglevel=info",
+    "check": ". .venv/bin/activate && python -m compileall creative_pipeline"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
